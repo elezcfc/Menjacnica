@@ -26,6 +26,8 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv.isEmpty())
+			throw new RuntimeException("Morate uneti naziv");
 		this.naziv = naziv;
 	}
 
@@ -34,6 +36,8 @@ public class Valuta {
 	}
 
 	public void setSkraceni_naziv(String skraceni_naziv) {
+		if(skraceni_naziv.isEmpty())
+			throw new RuntimeException("Morate uneti skraceni naziv");
 		this.skraceni_naziv = skraceni_naziv;
 	}
 
@@ -42,6 +46,8 @@ public class Valuta {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if(datum == null)
+			throw new RuntimeException("Morate uneti datum");
 		this.datum = datum;
 	}
 
@@ -50,6 +56,8 @@ public class Valuta {
 	}
 
 	public void setProdajni(int prodajni) {
+		if(prodajni <= 0)
+			throw new RuntimeException("Morate uneti kurs");
 		this.prodajni = prodajni;
 	}
 
@@ -58,6 +66,8 @@ public class Valuta {
 	}
 
 	public void setSrednji(int srednji) {
+		if(srednji <= 0)
+			throw new RuntimeException("Morate uneti kurs");
 		this.srednji = srednji;
 	}
 
@@ -66,6 +76,8 @@ public class Valuta {
 	}
 
 	public void setKupovni(int kupovni) {
+		if(kupovni <= 0)
+			throw new RuntimeException("Morate uneti kurs");
 		this.kupovni = kupovni;
 	}
 

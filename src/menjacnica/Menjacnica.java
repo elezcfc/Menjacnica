@@ -19,6 +19,8 @@ public class Menjacnica {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv.isEmpty())
+			throw new RuntimeException("Morate uneti naziv");
 		this.naziv = naziv;
 	}
 
@@ -27,6 +29,8 @@ public class Menjacnica {
 	}
 
 	public void setMesto(String mesto) {
+		if(mesto.isEmpty())
+			throw new RuntimeException("Morate uneti mesto");
 		this.mesto = mesto;
 	}
 
